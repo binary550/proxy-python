@@ -1,0 +1,8 @@
+strict_chain
+remote_dns_subnet 224
+
+tcp_read_time_out 15000
+tcp_connect_time_out 15000
+
+[ProxyList]
+<RESERVED FOR proxychains.conf : DONT TOUCH !!!>
