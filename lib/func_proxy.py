@@ -3,8 +3,23 @@
 import sys
 from random import randrange
 
+# Func. write
+def write(filename_template, filename_conf, proxy_info):
+	
+	# Read
+	with open(filename_template, "r") as function:
+		proxy_content = function.readlines()
+		proxy_line = len(proxy_content)
+	
+	# Replace proxy info
+	proxy_content[proxy_line - 1] = proxy_info
+
+	# Write
+	with open(filename_conf, "w") as function:
+		function.writelines(proxy_content)
+
 # Func. manual proxy
-def manual(filename, filename_template):
+def manual(filename_conf, filename_template):
 	if len(sys.argv) == 5:
 		
 		# Get sys. argument
@@ -15,18 +30,8 @@ def manual(filename, filename_template):
 		# Create proxy info
 		proxy_info = protocol + " " + server + " " + port
 
-		# Read
-		with open(filename_template, "r") as function:
-			proxy_content = function.readlines()
-			proxy_line = len(proxy_content)
-		
-		# Replace proxy info
-		proxy_content[proxy_line - 1] = proxy_info
-
 		# Write
-		with open(filename, "w") as function:
-			function.writelines(proxy_content)
-
+		write(filename_template, filename_conf, proxy_info)
 
 # Func. random proxy
 def random(filename_list, filename_conf, filename_template):
@@ -40,15 +45,5 @@ def random(filename_list, filename_conf, filename_template):
 	proxy_len = len(proxy_list)
 	proxy_random = randrange(0, proxy_len)
 	proxy_info = proxy_list[proxy_random]
-		
-	# Read
-	with open(filename_template, "r") as function:
-		proxy_content = function.readlines()
-		proxy_line = len(proxy_content)
-
-	# Replace proxy info
-	proxy_content[proxy_line - 1] = proxy_info
-
-	# Write
-	with open(filename_conf, "w") as function:
-		function.writelines(proxy_content)
+	
+	write(filename_template, filename_conf, proxy_info)
