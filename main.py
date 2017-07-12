@@ -5,8 +5,10 @@ sys.path.insert(0, "lib")
 import func_user
 import func_open
 import func_proxy
+import func_update
 
 # Var.
+proxy_download = "data/index"
 proxy_file = "data/list"
 proxy_conf = "data/proxychains.conf"
 proxy_template = "data/proxychains.template"
@@ -25,7 +27,7 @@ if len(sys.argv) > 1:
 
 	# Update Proxy list
 	elif sys.argv[1] == "-u" or sys.argv[1] == "--update":
-		func_proxy.update()
+		func_update.update(proxy_download, proxy_file)
 
 	# Show Available Proxy
 	elif sys.argv[1] == "-l" or sys.argv[1] == "--list":
