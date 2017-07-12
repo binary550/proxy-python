@@ -33,8 +33,10 @@ Or you can update proxy list :
 
 ### To-Do
 
- + Proxy list update (from premproxy.net)
- + Same function for func_proxy.manual + .random
+ + ~~Proxy list update (from premproxy.net)~~
+ + ~~Same function for func_proxy.manual + .random~~
+ + Auto choose between HTTP, SOCKS4 and SOCKS5
+ + Display selected proxy
 
 ## License
 
