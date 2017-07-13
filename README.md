@@ -1,4 +1,4 @@
-![Python-Proxy](data/logo.jpg)
+![Python-Proxy](logo.jpg)
 
 A frontend of proxychains-ng with python
 
