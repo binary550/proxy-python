@@ -3,6 +3,11 @@
 import sys
 from random import randrange
 
+# Func. list
+def list(filename_list):
+	with open(filename_list, "r") as function:
+		print("+====================+\n", function.read(),"\n+====================+")
+
 # Func. write
 def write(filename_template, filename_conf, proxy_info):
 	
@@ -13,6 +18,9 @@ def write(filename_template, filename_conf, proxy_info):
 	
 	# Replace proxy info
 	proxy_content[proxy_line - 1] = proxy_info
+
+	# Display selected proxy
+	print("  Selected proxy : ", proxy_info)
 
 	# Write
 	with open(filename_conf, "w") as function:
@@ -45,5 +53,6 @@ def random(filename_list, filename_conf, filename_template):
 	proxy_len = len(proxy_list)
 	proxy_random = randrange(0, proxy_len)
 	proxy_info = proxy_list[proxy_random]
-	
+
+	# Write
 	write(filename_template, filename_conf, proxy_info)
