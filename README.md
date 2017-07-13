@@ -1,42 +1,49 @@
 ![Python-Proxy](logo.jpg)
 
-A frontend of proxychains-ng with python
+A frontend of proxychains-ng writed with love with python3.6
 
 ## Documentation
 
 ### Manual
 
-Pytho-Proxy allows you to set a random proxy or add your
+Python-Proxy allows you to set a random proxy or add your
 
 Proxychains configuration is located in data/proxychains.template
 
-All proxy are located in data/list
+All proxy are located in data/list, and html source are readable in data/index
+
 
 
 ##### Example
 
-You can use Python-Proxy to run a programm : 
+python-proxy has a built in update function (only socks4 support right now) :
+
+> python-proxy -u
+
+You can list all your proxy list :
+
+> python-proxy -l
+
+Afterwards, you can run a program through a random proxy :
 
 > python-proxy -r firefox
 
-Or just set a random proxy (when computer boot or with crontab) :
+And check your ip :
 
-> python-proxy -r
+> python-proxy -r curl -s checkip.amazonaws.com
 
-If you want to set a specific proxy : 
+Or if you want to connect with a custom proxy :
 
-> python-proxy -c socks5 127.0.0.1 1080
+> python-proxy -c http 123.456.789.01 8080
 
-Or you can update proxy list :
-
-> python-proxy -u
 
 ### To-Do
 
  + ~~Proxy list update (from premproxy.net)~~
  + ~~Same function for func_proxy.manual + .random~~
+ + ~~Program execution after python-proxy -r~~
  + Auto choose between HTTP, SOCKS4 and SOCKS5
- + Display selected proxy
+ + ~~Display selected proxy~~
 
 ## License
 
