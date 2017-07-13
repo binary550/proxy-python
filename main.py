@@ -23,7 +23,7 @@ if len(sys.argv) > 1:
 		
 		# Exec program
 		if len(sys.argv) >= 6:
-			func_user.exec("/usr/bin", sys.argv[5], 6)
+			func_user.exec("/usr/bin/", sys.argv[5], proxy_conf, 6)
 		
 	# Random Proxy
 	elif sys.argv[1] == "-r" or sys.argv[1] == "--random":
@@ -31,7 +31,7 @@ if len(sys.argv) > 1:
 		
 		# Exec program
 		if len(sys.argv) >= 3:
-			func_user.exec("/usr/bin", sys.argv[2], 3)
+			func_user.exec("/usr/bin/", sys.argv[2], proxy_conf, 3)
 
 	# Update Proxy list
 	elif sys.argv[1] == "-u" or sys.argv[1] == "--update":
