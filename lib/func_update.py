@@ -5,7 +5,7 @@ import urllib.request
 def update(filename_download, filename_write):
 	
 	# Var.
-	url = "https://premproxy.com/list/ip-port/1.htm"
+	url = "https://premproxy.com/socks-list/ip-port/1.htm"
 	search_begin = "	<!-- IP:Port list -->"
 	search_end = "</pre>"
 	i = 0
@@ -33,6 +33,7 @@ def update(filename_download, filename_write):
 
 		for i in range(search_begin_index, search_end_index):
 			ip_list[i] = ip_list[i].replace(":", " ")
+			ip_list[i] = "socks4 " + ip_list[i]
 			server_list = server_list + ip_list[i]
 	
 	# Write file
