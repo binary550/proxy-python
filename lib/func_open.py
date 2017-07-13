@@ -15,7 +15,7 @@ def write(filename, protocol, server, port):
 
 		text = "strict_chain\nremote_dns_subnet 224\n"
 		text = text + "\ntcp_read_time_out 15000\ntcp_connect_time_out 15000\n"
-		text = text + "\n[ProxyList]\n" + info + "\n"
+		text = text + "\n[ProxyList]\n" + info + "\n "
 
 		function.write(text)
 		
