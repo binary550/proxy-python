@@ -1,6 +1,7 @@
 #!/bin/python
 
 import sys
+import os
 
 # Func. help message
 def help():
@@ -25,3 +26,10 @@ def error():
  Try 'proxy-python -h' to see help.
 """
 )
+
+# Func. user exec
+def exec(directory, program, lenght):
+	program = directory + "/" + program + " " + " ".join(sys.argv[lenght:])
+	os.system(program)
+	
+	
