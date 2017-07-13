@@ -28,8 +28,8 @@ def error():
 )
 
 # Func. user exec
-def exec(directory, program, lenght):
-	program = directory + "/" + program + " " + " ".join(sys.argv[lenght:])
+def exec(directory, program, proxy_conf, lenght):
+	program = "/usr/bin/proxychains -f " + proxy_conf + " " + directory + program + " " + " ".join(sys.argv[lenght:])
 	os.system(program)
 	
 	
