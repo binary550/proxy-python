@@ -18,7 +18,9 @@ All proxy are located in data/list, and html source are readable in data/index
 
 python-proxy has a built in update function (only socks4 support right now) :
 
-> python-proxy -u
+----
+python-proxy -u
+----
 
 You can list all your proxy list :
 
