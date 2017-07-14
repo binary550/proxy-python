@@ -27,9 +27,21 @@ def error():
 """
 )
 
+
 # Func. user exec
 def exec(directory, program, proxy_conf, lenght):
-	program = "/usr/bin/proxychains -f " + proxy_conf + " " + directory + program + " " + " ".join(sys.argv[lenght:])
-	os.system(program)
+	program = directory + "proxychains -f " + proxy_conf + " " + directory + program + " " + " ".join(sys.argv[lenght:])
 	
+	#os.system("/usr/bin/curl -s checkip.amazonaws.com")
 	
+	# Check if proxy is online
+	proxy_ip = directory + "proxychains -q -f " + proxy_conf + " " + directory + "curl -s checkip.amazonaws.com > /dev/null"
+	#proxy_up = os.system(proxy_ip)
+
+	if os.system(proxy_ip) == 0:
+		print("[OK] Proxy server online")
+		print("[OK] Connected to proxy\n")
+		os.system(program)
+	
+	else:
+		print("[ERR] Proxy server is offline\n")
