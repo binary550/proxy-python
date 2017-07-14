@@ -35,12 +35,13 @@ def exec(directory, program, proxy_conf, lenght):
 	#os.system("/usr/bin/curl -s checkip.amazonaws.com")
 	
 	# Check if proxy is online
-	proxy_ip = directory + "proxychains -q -f " + proxy_conf + " " + directory + "curl -s checkip.amazonaws.com > /dev/null"
-	#proxy_up = os.system(proxy_ip)
+	proxy_ip = directory + "proxychains -q -f " + proxy_conf + " " + directory + "curl -s checkip.amazonaws.com"
+	proxy_ip_null = proxy_ip + " > /dev/null"
 
-	if os.system(proxy_ip) == 0:
+	if os.system(proxy_ip_null) == 0:
 		print("[OK] Proxy server online")
-		print("[OK] Connected to proxy\n")
+		print("[OK] Connected to proxy")
+		print("[OK] New current IP : ", os.popen(proxy_ip).read())
 		os.system(program)
 	
 	else:
