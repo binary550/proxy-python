@@ -20,7 +20,7 @@ def write(filename_template, filename_conf, proxy_info):
 	proxy_content[proxy_line - 1] = proxy_info
 
 	# Display selected proxy
-	print("  Selected proxy : ", proxy_info)
+	print("[OK] Selected proxy : ", proxy_info)
 
 	# Write
 	with open(filename_conf, "w") as function:
