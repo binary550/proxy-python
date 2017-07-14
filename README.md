@@ -4,7 +4,7 @@ A frontend of proxychains-ng writed with love with python3.6
 
 ## Documentation
 
-### Manual
+### Introduction
 
 Python-Proxy allows you to set a random proxy or add your
 
@@ -12,9 +12,7 @@ Proxychains configuration is located in data/proxychains.template
 
 All proxy are located in data/list, and html source are readable in data/index
 
-
-
-##### Example
+### Example
 
 python-proxy has a built in update function (only socks4 support right now) :
 
@@ -42,8 +40,9 @@ Or if you want to connect with a custom proxy :
  + ~~Proxy list update (from premproxy.net)~~
  + ~~Same function for func_proxy.manual + .random~~
  + ~~Program execution after python-proxy -r~~
- + Auto choose between HTTP, SOCKS4 and SOCKS5
  + ~~Display selected proxy~~
+ + ~~Detect proxy online/offline~~
+ + Auto choose between HTTP, SOCKS4 and SOCKS5
 
 ## License
 
