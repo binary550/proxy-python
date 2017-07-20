@@ -1,5 +1,7 @@
 ![Py-Proxy](img/logo.jpg)
 
+[![AUR](https://img.shields.io/aur/license/yaourt.svg?style=flat-square)]() [![Travis](https://img.shields.io/travis/rust-lang/rust.svg?style=flat-square)]()
+
 A frontend of proxychains-ng writed with love with python3.6
 
 ## Documentation
