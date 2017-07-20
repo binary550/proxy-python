@@ -7,7 +7,7 @@ import os
 def help():
 	print(
 	"""
-Usage: proxy-python [OPTION]... [PROGRAM]...
+Usage: py-proxy [OPTION]... [PROGRAM]...
 Change proxy to a random server found in data file or from premproxy.net
 
   -c, --choose     manual proxy           [protocol server port]
