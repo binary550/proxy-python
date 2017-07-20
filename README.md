@@ -1,4 +1,4 @@
-![Python-Proxy](img/logo.jpg)
+![Py-Proxy](img/logo.jpg)
 
 A frontend of proxychains-ng writed with love with python3.6
 
@@ -6,40 +6,42 @@ A frontend of proxychains-ng writed with love with python3.6
 
 ### Introduction
 
-Python-Proxy allows you to set a random proxy or add your
+Py-Proxy allows you to set a random proxy or add your.
 
-Proxychains configuration is located in data/proxychains.template
+Proxychains configuration is located in data/proxychains.template .
 
-All proxy are located in data/list, and html source are readable in data/index
+All proxy are located in data/list, and html source are readable in data/index .
+
+For the time being, Py-Proxy only support socks4 connection with the random option (Http, socks4/5 are available with manually option, or you can edit proxy file).
 
 ### Example
 
-python-proxy has a built in update function (only socks4 support right now) :
+py-proxy has a built in update function (only socks4 support right now) :
 
-> python-proxy -u
+> py-proxy -u
 
 You can list all your proxy list :
 
-> python-proxy -l
+> py-proxy -l
 
 Afterwards, you can run a program through a random proxy :
 
-> python-proxy -r firefox
+> py-proxy -r firefox
 
 And check your ip :
 
-> python-proxy -r curl -s checkip.amazonaws.com
+> py-proxy -r curl -s checkip.amazonaws.com
 
 Or if you want to connect with a custom proxy :
 
-> python-proxy -c http 123.456.789.01 8080
+> py-proxy -c http 123.456.789.01 8080
 
 
 ### To-Do
 
- + ~~Proxy list update (from premproxy.net)~~
+ + ~~Proxy list update (from premproxy.com)~~
  + ~~Same function for func_proxy.manual + .random~~
- + ~~Program execution after python-proxy -r~~
+ + ~~Program execution after py-proxy -r~~
  + ~~Display selected proxy~~
  + ~~Detect proxy online/offline~~
  + Auto choose between HTTP, SOCKS4 and SOCKS5
