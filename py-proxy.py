@@ -1,11 +1,10 @@
 #!/bin/python
 
 import sys
-sys.path.insert(0, "lib")
-import func_user
-import func_open
-import func_proxy
-import func_update
+import lib.func_user as func_user
+import lib.func_open as func_open
+import lib.func_proxy as func_proxy
+import lib.func_update as func_update
 
 # Var.
 proxy_download = "data/index"
